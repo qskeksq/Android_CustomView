@@ -8,29 +8,6 @@
     android:orientation="vertical"
     tools:context="com.example.administrator.customview3.measuring.MeasuringActivity">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:background="#ffff00"
-        android:layout_width="match_parent"
-        android:layout_height="100px">
-
-        <Button
-            android:layout_width="100px"
-            android:layout_height="wrap_content"
-            android:text="Left"/>
-
-        <com.example.administrator.customview3.measuring.Measuring
-            android:id="@+id/meas"
-            android:layout_width="100px"
-            android:layout_height="50px" />
-
-        <Button
-            android:layout_width="100px"
-            android:layout_height="wrap_content"
-            android:text="Right"/>
-
-    </LinearLayout>
-
     <TextView
         android:id="@+id/text"
         android:layout_width="match_parent"
@@ -57,6 +34,12 @@
     <com.example.administrator.customview3.view.RainbowDivider
         android:id="@+id/divider"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="20dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
 
 </LinearLayout>
