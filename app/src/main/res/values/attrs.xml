@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- AnimButton -->
+    <declare-styleable name="AniButton">
+        <attr name="animation" format="boolean" />
+    </declare-styleable>
+
+
+    <!-- SoundEdit -->
+    <declare-styleable name="SoundEdit">
+        <attr name="sound" format="integer"/>
+        <attr name="volume" format="float" />
+        <attr name="speed" format="float" />
+    </declare-styleable>
+
+
+    <!-- CompoundDrawableTextView -->
+    <declare-styleable name="CompoundDrawableTextView">
+        <attr name="where" format="integer"/>
+        <attr name="compoundImgage" format="reference" />
+    </declare-styleable>
+
+
+    <!-- RatingStar -->
+    <declare-styleable name="RatingStar">
+        <attr name="starNum" format="integer" />
+    </declare-styleable>
+
+
+    <!-- LaunchPad -->
+    <declare-styleable name="LaunchPad">
+        <attr name="padColor" format="color" />
+        <attr name="selectedColor" format="color" />
+        <attr name="rowCount" format="integer" />
+        <attr name="columnCount" format="integer" />
+    </declare-styleable>
+
+
+    <!-- RainBowProgress -->
+    <declare-styleable name="RainBowProgress">
+        <attr name="max" format="integer" />
+        <attr name="position" format="integer" />
+    </declare-styleable>
+
+</resources>
