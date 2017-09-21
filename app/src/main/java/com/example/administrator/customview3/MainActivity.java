@@ -9,7 +9,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_launchpad);
+        setContentView(R.layout.activity_piano);
 //
 //        final RainBowProgress rainBowProgress = (RainBowProgress) findViewById(R.id.rainbow);
 //        final RainbowDivider divider = (RainbowDivider) findViewById(R.id.divider);
