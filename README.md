@@ -3,7 +3,7 @@
 ![](https://github.com/qskeksq/CustomView3/blob/master/pic/custom1.png)
 ![](https://github.com/qskeksq/CustomView3/blob/master/pic/custom3.png)
 ![](https://github.com/qskeksq/CustomView3/blob/master/pic/custom5.gif)
-![](https://github.com/qskeksq/CustomView3/blob/master/pic/cutsom4.gif)
+![](https://github.com/qskeksq/CustomView/blob/master/pic/AC_%5B20170921-210750%5D.gif)
 
 ## 1. 기본 위젯 상속(extends 위젯)
 
