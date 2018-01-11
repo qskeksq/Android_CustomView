@@ -118,7 +118,6 @@
   }
 
  ```
- 
  ```java
  Log.e("onMeasure확인", width+":"+height+":"+mode);
  Log.e("getwidth", getWidth()+"");
@@ -127,6 +126,26 @@
  Log.e("getMeasuedHeight", getMeasuredHeight()+"");
  Log.e("getdefaultwidthsize", getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec)+"");
  Log.e("getdefaulthegithsize", getDefaultSize(getSuggestedMinimumWidth(), heightMeasureSpec)+"");
+ ```
+ 
+> cf) View가 화면에 그려지는 시점을 파악할 수 있다
+ 
+```java
+ ViewTreeObserver.OnGlobalLayoutListener globalLayout = new ViewTreeObserver.OnGlobalLayoutListener() {
+     @Override
+     public void onGlobalLayout() {
+         int count = recyclerView.getLayoutManager().getChildCount();
+         height = recyclerView.getLayoutManager().getChildAt(0).getHeight()*5;
+         for (int i = 0; i < count; i++) {
+             Log.e("확인"+i, recyclerView.getLayoutManager().getChildAt(i).getWidth()+"");
+         }
+         ViewGroup.LayoutParams params=recyclerView.getLayoutParams();
+         params.height=height;
+         recyclerView.setLayoutParams(params);
+         recyclerView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+     }
+ };
+ recyclerView.getViewTreeObserver().addOnGlobalLayoutListener(globalLayout);
  ```
 
  #### 소리나는 EditText
