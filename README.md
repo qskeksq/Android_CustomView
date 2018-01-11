@@ -118,6 +118,16 @@
   }
 
  ```
+ 
+ ```java
+ Log.e("onMeasure확인", width+":"+height+":"+mode);
+ Log.e("getwidth", getWidth()+"");
+ Log.e("getHeight", getHeight()+"");
+ Log.e("getMeasuedwidth", getMeasuredWidth()+"");
+ Log.e("getMeasuedHeight", getMeasuredHeight()+"");
+ Log.e("getdefaultwidthsize", getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec)+"");
+ Log.e("getdefaulthegithsize", getDefaultSize(getSuggestedMinimumWidth(), heightMeasureSpec)+"");
+ ```
 
  #### 소리나는 EditText
  ```java
@@ -190,6 +200,8 @@ public void init(){
   - onLayout에서 뷰 안에 그릴 위치 설정
   - onDraw에서 원하는 모양을 그려줌
   - onTouch에서 사용자 인터페이스 등록
+  
+  
 
 #### LaunchPad
 
