@@ -32,6 +32,7 @@ public class AnimButton extends AppCompatButton implements View.OnTouchListener{
         setOnTouchListener(this);
         getAttrs(attrs);
     }
+    
 
     /**
      * attrs.xml 에서 속성값을 TypedArray 로 가져온다
@@ -73,6 +74,42 @@ public class AnimButton extends AppCompatButton implements View.OnTouchListener{
         set.playTogether(animator, animator2);
         set.setDuration(1000);
         set.start();
+    }
+    
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int width = MeasureSpec.getSize(widthMeasureSpec);
+        int height = MeasureSpec.getSize(heightMeasureSpec);
+        int mode = MeasureSpec.getMode(widthMeasureSpec);
+
+        if(mode == MeasureSpec.AT_MOST){
+            Log.e("mode 확인", "AT_MOST");
+        } else if(mode == MeasureSpec.EXACTLY){
+            Log.e("mode", "EXACTLY");
+        } else if(mode == MeasureSpec.UNSPECIFIED){
+            Log.e("mode", "UNSPECIFIED");
+        }
+
+        Log.e("onMeasure확인", width+":"+height+":"+mode);
+        Log.e("getwidth", getWidth()+"");
+        Log.e("getHeight", getHeight()+"");
+        Log.e("getMeasuedwidth", getMeasuredWidth()+"");
+        Log.e("getMeasuedHeight", getMeasuredHeight()+"");
+        Log.e("getdefaultwidthsize", getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec)+"");
+        Log.e("getdefaulthegithsize", getDefaultSize(getSuggestedMinimumWidth(), heightMeasureSpec)+"");
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+        Log.e("언제 뜨는가", "onLayout");
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        Log.e("언제 뜨는가", "onDraw");
     }
 
     /**
